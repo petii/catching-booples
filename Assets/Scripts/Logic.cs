@@ -71,7 +71,6 @@ public class Logic : MonoBehaviour {
         }
     }
 
-
     public Dictionary<int, List<GameObject>> creaturesByEyes;
 
     void Awake() {
