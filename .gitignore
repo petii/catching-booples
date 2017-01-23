@@ -15,7 +15,7 @@
 !*.md
 !**/*.cs
 !**/*.apk
-#!apks/
+!apks/
 !*.pdf
 
 
