@@ -10,13 +10,23 @@
 ## and of course apk-s
 ## and like docs should be public I guess
 
+/*
 
 !.*
 !*.md
-!**/*.cs
-!**/*.apk
+
+!Assets/
+Assets/*
+!Assets/*.cs
+!Assets/Scripts/
+Assets/Scripts/*
+!Assets/Scripts/*.cs
+!Assets/Scripts/*/
+Assets/Scripts/*/*
+!Assets/Scripts/*/*.cs
+# Holy. Fucking. Shit.
+
 !apks/
 !*.pdf
 
 
-/*
