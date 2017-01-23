@@ -15,7 +15,9 @@ public class Central : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {}
+    void Update() {
+
+    }
 
     //0 survival
     //1,2 to be implemented
