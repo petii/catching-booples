@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
+//using System.Collections;
 
 public class Timer : MonoBehaviour {
 	
-	static public bool running = true;
+	public static bool running = true;
 
-	static public float deltaTime() {
+	public static float deltaTime() {
 		//print (running.ToString ());
 		if (running) {
 			return Time.deltaTime;
@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour {
 
 	}
 
-	static public float time() {
+	public static float time() {
 		if (running) {
 			return Time.time;
 		} else {
@@ -28,9 +28,11 @@ public class Timer : MonoBehaviour {
 	void Start () {
 		running = true;
 	}
+
+	void OnLevelWasLoaded() {
+		running = true;
+	}
 	
 	// Update is called once per frame
-	void Update () {
-	
-	}
+	void Update () {}
 }

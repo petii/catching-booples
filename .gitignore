@@ -26,6 +26,7 @@ Assets/Scripts/*/*
 !Assets/Scripts/*/*.cs
 # Holy. Fucking. Shit.
 
+!Screenshots/
 !apks/
 #apks/*
 #!apks/*.apk
