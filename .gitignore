@@ -1,2 +1,18 @@
-*.svg
-*.png
+# Ignoring pictures, because hey, that's like the most important part
+#*.svg
+#*.png
+#*.meta
+# Don't need temps as well
+# Temp/*
+
+# New idea: 
+## only track C# scripts (and shaders if I plan on adding any)
+## and of course apk-s
+## and like docs should be public I guess
+
+**
+
+!.*
+!*.cs
+!*.apk
+!*.pdf
