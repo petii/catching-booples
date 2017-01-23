@@ -138,17 +138,21 @@ public class Logic : MonoBehaviour {
 		}*/
 		//maybe too easy?
 		while (objCreatureCount <= Objective.killNum) {
-			AddCreature( whatToAdd );
-			++creatureCount;
-			if (whatToAdd) {
-				++objCreatureCount;
-			}
-			whatToAdd = RandomBool();
+            if (Timer.running) {
+                AddCreature( whatToAdd );
+                ++creatureCount;
+                if (whatToAdd) {
+                    ++objCreatureCount;
+                }
+                whatToAdd = RandomBool();
+            }
 			yield return new WaitForEndOfFrame();
 		}
 		while ( creatureCount < creatureSum ) {
-			AddCreature( false );
-			++creatureCount;
+            if (Timer.running) {
+                AddCreature( false );
+                ++creatureCount;
+            }
 			yield return new WaitForEndOfFrame();
 		}
 	}
