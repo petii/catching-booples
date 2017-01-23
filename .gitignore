@@ -10,9 +10,10 @@
 ## and of course apk-s
 ## and like docs should be public I guess
 
-**
+/*
 
 !.*
-!*.cs
-!*.apk
-!*.pdf
+!*.md
+!**.cs
+!**.apk
+!**.pdf
