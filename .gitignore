@@ -10,6 +10,8 @@
 ## and of course apk-s
 ## and like docs should be public I guess
 
+/*
+
 !.*
 !README.md
 
@@ -25,8 +27,9 @@ Assets/Scripts/*/*
 # Holy. Fucking. Shit.
 
 !apks/
+#apks/*
+#!apks/*.apk
 !*.pdf
 
 
-/*
 
