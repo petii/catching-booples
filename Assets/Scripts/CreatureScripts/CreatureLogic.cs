@@ -25,10 +25,10 @@ public class CreatureLogic : MonoBehaviour {
 
     public float mapBounds;
 
-
-
     // Use this for initialization
     void Start() {
+        eyeCount = this.transform.childCount;
+
         blinkTime = blinkTime * Random.Range( 0.5f, 1.5f );
 
         int spinDir = Random.Range( 0, 2 );

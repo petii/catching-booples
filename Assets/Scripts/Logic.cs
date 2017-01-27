@@ -107,7 +107,7 @@ public class Logic : MonoBehaviour {
 
         creatureContainer = transform.FindChild( "Creatures" ).transform;
 
-        print( creaturesByEyes.Count.ToString() );
+        //print( creaturesByEyes.Count.ToString() );
 
         //points = 50000;
         NewObjective();
@@ -157,9 +157,17 @@ public class Logic : MonoBehaviour {
 		}
 	}
 
+    int RandomEyeNumber() {
+        List<int> nums = new List<int>(creaturesByEyes.Keys);
+        return nums[Random.Range(0, nums.Count)];
+    }
+
     void NewObjective() {
         hasObjective = true;
-        Objective.NewMission( Random.Range( pool[0], pool[1] ), Random.Range( 1, creaturesByEyes.Count + 1 ) );
+        Objective.NewMission(   
+                Random.Range( pool[0], pool[1] ), 
+                RandomEyeNumber()
+            );
         NewObjPopup();
 
         GetComponent<GuiScript>().UpdateGUI( GuiScript.UpdateType.newObj );
