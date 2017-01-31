@@ -18,15 +18,18 @@ public class Central : MonoBehaviour {
     void Update() {}
 
     //0 survival
-    //1,2 to be implemented
+    //1 sudden death
+    //2 time attack
     public void StartGame( int mode ) {
         switch ( mode ) {
             case 0:
                 MODE = GameMode.Survival;
                 break;
             case 1:
+                MODE = GameMode.SuddenDeath;
                 break;
             case 2:
+                MODE = GameMode.TimeAttack;
                 break;
 
         }

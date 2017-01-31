@@ -5,25 +5,18 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class CreatureLogic : MonoBehaviour {
-
     public float blinkTime;
-
     public int eyeCount;
-
     //public static bool Exists = false;
-
     float speed = 1;
     public List<int> speedRange;
-
     float spinSpeed = 1;
     public List<int> spinSpeedRange;
-
     public float radius = 10;
-
     float scaleAmount;
     public List<float> scaleRange;
-
     public float mapBounds;
+    bool vanishing = false;
 
     // Use this for initialization
     void Start() {
@@ -61,7 +54,6 @@ public class CreatureLogic : MonoBehaviour {
 
     }
 
-    bool vanishing = false;
 
     // Update is called once per frame
     void Update() {
@@ -106,7 +98,7 @@ public class CreatureLogic : MonoBehaviour {
         }
 
         if ( tod != TypeOfDeath.objComplete )
-            this.transform.parent.parent.GetComponent<Logic>().AddCreature();
+            this.transform.parent.parent.GetComponent<Logic>().AddCreature(false);
 
         GetComponent<Rigidbody2D>().AddTorque( spinSpeed );
 
