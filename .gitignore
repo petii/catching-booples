@@ -24,7 +24,10 @@ Assets/Scripts/*
 !Assets/Scripts/*/
 Assets/Scripts/*/*
 !Assets/Scripts/*/*.cs
-# Holy. Fucking. Shit.
+
+!Assets/Shaders/
+Assets/Shaders/*
+!Assets/Shaders/*.shader
 
 !Screenshots/
 !apks/
