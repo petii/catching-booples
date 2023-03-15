@@ -1,40 +1,12 @@
-# Ignoring pictures, because hey, that's like the most important part
-#*.svg
-#*.png
-#*.meta
-# Don't need temps as well
-# Temp/*
+*.log
+*.jpg
+*.png
+*.cache
 
-# New idea: 
-## only track C# scripts (and shaders if I plan on adding any)
-## and of course apk-s
-## and like docs should be public I guess
+.vs/*
+.vscode/*
 
-/*
-
-!.gitignore
-!README.md
-
-!Assets/
-Assets/*
-!Assets/*.cs
-!Assets/Scripts/
-Assets/Scripts/*
-!Assets/Scripts/*.cs
-!Assets/Scripts/*/
-Assets/Scripts/*/*
-!Assets/Scripts/*/*.cs
-
-!Assets/Shaders/
-Assets/Shaders/*
-!Assets/Shaders/*.shader
-
-!Screenshots/
-!apks/
-#apks/*
-#!apks/*.apk
-!*.pdf
-!package/
-
-
-
+# ShaderCache/*
+*.bin
+**/metadata/*
+*.meta
