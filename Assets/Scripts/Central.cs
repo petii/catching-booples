@@ -31,7 +31,6 @@ public class Central : MonoBehaviour {
             case 2:
                 MODE = GameMode.TimeAttack;
                 break;
-
         }
         Application.LoadLevel( 1 );
     }

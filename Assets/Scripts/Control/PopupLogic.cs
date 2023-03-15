@@ -26,6 +26,7 @@ public class PopupLogic : MonoBehaviour {
 
         GetComponent<Animator>().Play( "Appear" );
 
+        // This part is probably not needed
         eyeContainer = transform.FindChild( "Background" ).FindChild( "Eyes" );
         eyeContainer.GetComponent<Rigidbody2D>().isKinematic = true;
         eyeContainer.GetComponent<Rigidbody2D>().isKinematic = false;
