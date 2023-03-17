@@ -1,12 +1,12 @@
 *.log
-*.jpg
-*.png
+# *.jpg
+# *.png
 *.cache
 
 .vs/*
 .vscode/*
 
-# ShaderCache/*
+# # ShaderCache/*
 *.bin
 **/metadata/*
 *.meta
