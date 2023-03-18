@@ -7,7 +7,10 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/[Ll]ibrary/
+/[Ll]ibrary/*
+# https://stackoverflow.com/a/59746059
+!/[Ll]ibrary/**/*.asset
+
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
