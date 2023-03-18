@@ -1,15 +1,7 @@
-# *.log
-# # *.jpg
-# # *.png
-# *.cache
-
+# Editor settings
 .vs/*
 .vscode/*
 
-# # # ShaderCache/*
-# *.bin
-# **/metadata/*
-# *.meta
 
 # This .gitignore file should be placed at the root of your Unity project directory
 #
