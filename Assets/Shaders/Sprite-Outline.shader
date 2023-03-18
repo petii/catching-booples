@@ -1,4 +1,6 @@
-﻿Shader "Sprites/Outline" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Sprites/Outline" {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
 		_Color ( "Color", Color ) = ( 1, 0, 0, 1 )
@@ -38,7 +40,7 @@
 
 			vertOutput vert ( vertInput input ) {
 				vertOutput o;
-				o.pos = mul( UNITY_MATRIX_MVP, input.pos );
+				o.pos = UnityObjectToClipPos( input.pos );
 				o.c = input.c; // * _Color;
 				o.texcoord = input.texcoord;
                 // o.pos = UnityPixelSnap (o.pos);

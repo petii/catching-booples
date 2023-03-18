@@ -32,7 +32,7 @@ public class CreatureLogic : MonoBehaviour {
 
         EventTrigger ter = GetComponent<EventTrigger>();
         UnityAction<BaseEventData> ua = new UnityAction<BaseEventData>( NewClickHandling );
-        ter.delegates[0].callback.AddListener( ua );
+        ter.triggers[0].callback.AddListener( ua );
 
         spinSpeed = spinDir * Random.Range( spinSpeedRange[0], spinSpeedRange[1] );
 
@@ -67,7 +67,7 @@ public class CreatureLogic : MonoBehaviour {
                 GetComponent<Rigidbody2D>().AddForce( force );
             }
             if ( Mathf.Abs( transform.position.x ) > mapBounds || Mathf.Abs( transform.position.y ) > mapBounds ) {
-                Death( TypeOfDeath.outOfBounds );
+                // Death( TypeOfDeath.outOfBounds );
             }
         }
     }

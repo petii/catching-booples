@@ -10,9 +10,9 @@ public class GuiScript : MonoBehaviour {
     RectTransform creatureCount;
 
     void Awake() {
-        eyes = (RectTransform)transform.FindChild( "Canvas" ).FindChild( "Info" ).FindChild( "Background" ).FindChild( "eyeNum" );
-        progress = (RectTransform)transform.FindChild( "Canvas" ).FindChild( "Info" ).FindChild( "Background" ).FindChild( "creatureNum" );
-        time = (RectTransform)transform.FindChild( "Canvas" ).FindChild( "Info" ).FindChild( "Background" ).FindChild( "time" );
+        eyes = (RectTransform)transform.Find( "Canvas" ).Find( "Info" ).Find( "Background" ).Find( "eyeNum" );
+        progress = (RectTransform)transform.Find( "Canvas" ).Find( "Info" ).Find( "Background" ).Find( "creatureNum" );
+        time = (RectTransform)transform.Find( "Canvas" ).Find( "Info" ).Find( "Background" ).Find( "time" );
     }
 
     // Update is called once per frame

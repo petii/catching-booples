@@ -101,11 +101,11 @@ public class Logic : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        canvas = transform.FindChild( "Canvas" );
+        canvas = transform.Find( "Canvas" );
 
         lost = false;
 
-        creatureContainer = transform.FindChild( "Creatures" ).transform;
+        creatureContainer = transform.Find( "Creatures" ).transform;
 
         if ( Central.MODE == Central.GameMode.TimeAttack ) {
             time = 60f;
@@ -118,7 +118,7 @@ public class Logic : MonoBehaviour {
     }
 
     void NewObjPopup() {
-        canvas.FindChild( "Popup" ).GetComponent<PopupLogic>().ShowYourself( Objective.eyeCount );
+        canvas.Find( "Popup" ).GetComponent<PopupLogic>().ShowYourself( Objective.eyeCount );
     }
 
     bool RandomBool() {
@@ -209,17 +209,17 @@ public class Logic : MonoBehaviour {
     }
     
     public void Lost() {
-        var dropdown = transform.FindChild( "Canvas" ).FindChild( "Dropdown" );
-        dropdown.FindChild( "Restart" ).gameObject.SetActive( true );
+        var dropdown = transform.Find( "Canvas" ).Find( "Dropdown" );
+        dropdown.Find( "Restart" ).gameObject.SetActive( true );
         dropdown.GetComponent<DropdownScript>().LosingDrop();
-        var pts = dropdown.FindChild( "points" );
-        var objComp = dropdown.FindChild( "compTask" );
-        pts.FindChild( "Text" ).GetComponent<Text>().text = points.ToString();
-        objComp.FindChild( "Text" ).GetComponent<Text>().text = completedObjectives.ToString();
+        var pts = dropdown.Find( "points" );
+        var objComp = dropdown.Find( "compTask" );
+        pts.Find( "Text" ).GetComponent<Text>().text = points.ToString();
+        objComp.Find( "Text" ).GetComponent<Text>().text = completedObjectives.ToString();
 
 
 
-        transform.FindChild( "Canvas" ).FindChild( "Info" ).GetComponent<Toggle>().enabled = false;
+        transform.Find( "Canvas" ).Find( "Info" ).GetComponent<Toggle>().enabled = false;
         lost = true;
         time = 0;
 
@@ -229,7 +229,7 @@ public class Logic : MonoBehaviour {
     }
 
 	void CreaturesMovement(bool disable) {
-		var Container = transform.FindChild ("Creatures");
+		var Container = transform.Find ("Creatures");
 		for (int i=0; i<Container.childCount; ++i) {
 			Container.GetChild(i).GetComponent<Rigidbody2D>().isKinematic = disable;
 			Container.GetChild(i).GetComponent<CircleCollider2D>().enabled = !disable;
