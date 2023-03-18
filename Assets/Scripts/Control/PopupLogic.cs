@@ -21,13 +21,13 @@ public class PopupLogic : MonoBehaviour {
     public void ShowYourself( int eyeNumber ) {
 
 
-        text = transform.FindChild( "Background" ).FindChild( "Number" );
+        text = transform.Find( "Background" ).Find( "Number" );
 
 
         GetComponent<Animator>().Play( "Appear" );
 
         // This part is probably not needed
-        eyeContainer = transform.FindChild( "Background" ).FindChild( "Eyes" );
+        eyeContainer = transform.Find( "Background" ).Find( "Eyes" );
         eyeContainer.GetComponent<Rigidbody2D>().isKinematic = true;
         eyeContainer.GetComponent<Rigidbody2D>().isKinematic = false;
         int va = ((Random.Range( 0, 2 ) * 2) - 1) * Random.Range( 40, 80 );

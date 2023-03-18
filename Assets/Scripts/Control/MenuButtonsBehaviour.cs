@@ -15,14 +15,14 @@ public class MenuButtonsBehaviour : MonoBehaviour {
 	}
 
     public void StartPress() {
-        var startbutt = transform.FindChild( "start" );
+        var startbutt = transform.Find( "start" );
         if ( !startbutt.GetComponent<Toggle>().isOn ) {
             startbutt.GetComponent<Animator>().Play( "Shrink" );
-            transform.FindChild( "SubButtonContainer" ).GetComponent<Animator>().Play( "Float Out" );
+            transform.Find( "SubButtonContainer" ).GetComponent<Animator>().Play( "Float Out" );
         }
         else {
             startbutt.GetComponent<Animator>().Play( "Expand" );
-            transform.FindChild( "SubButtonContainer" ).GetComponent<Animator>().Play( "Float In" );
+            transform.Find( "SubButtonContainer" ).GetComponent<Animator>().Play( "Float In" );
         }
     }
 
@@ -37,7 +37,7 @@ public class MenuButtonsBehaviour : MonoBehaviour {
     }
 
     IEnumerator CreditsOtherButtonsSetActive() {
-        var sett = transform.FindChild( "settings" ).gameObject;
+        var sett = transform.Find( "settings" ).gameObject;
         if (sett.activeSelf) {
             yield return new WaitForSeconds( 0.03f );
         }
@@ -48,7 +48,7 @@ public class MenuButtonsBehaviour : MonoBehaviour {
     }
 
     IEnumerator SetContentActiveState() {
-        var Content = transform.FindChild( "credits" ).FindChild( "CreditsText" ).gameObject;
+        var Content = transform.Find( "credits" ).Find( "CreditsText" ).gameObject;
         if ( creditsUp ) {
             yield return new WaitForSeconds( 0.35f );
         }
@@ -62,10 +62,10 @@ public class MenuButtonsBehaviour : MonoBehaviour {
     
     public void CreditsPress() {
         if (creditsUp) {
-            transform.FindChild( "credits" ).GetComponent<Animator>().Play( "Down" );
+            transform.Find( "credits" ).GetComponent<Animator>().Play( "Down" );
         }
         else {
-            transform.FindChild( "credits" ).GetComponent<Animator>().Play( "Up" );
+            transform.Find( "credits" ).GetComponent<Animator>().Play( "Up" );
         }
         //StartCoroutine( "SetContentActiveState" );
         StartCoroutine( "CreditsOtherButtonsSetActive" );

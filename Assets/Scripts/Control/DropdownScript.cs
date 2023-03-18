@@ -7,7 +7,7 @@ public class DropdownScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        on = transform.parent.FindChild( "Info" ).GetComponent<Toggle>().isOn;
+        on = transform.parent.Find( "Info" ).GetComponent<Toggle>().isOn;
 	}
 	
 	// Update is called once per frame
